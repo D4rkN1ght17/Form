@@ -1,0 +1,15 @@
+<?php
+// Verificamos si se enviaron datos a través del método POST
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Recibimos los datos del formulario
+    $nombre = $_POST['nombre'];
+    $apellidos = $_POST['apellidos'];
+    $avatar = $_POST['avatar'];
+}
+
+// Redireccionamos al usuario a otra_pagina.html
+header("Location: otra_pagina.html?nombre=$nombre&apellidos=$apellidos&avatar=$avatar");
+exit; // Asegura que el script se detenga después de la redirección
+?>
+
+

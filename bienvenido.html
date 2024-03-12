@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Otra Página</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <?php
+            // Recibimos los datos pasados por el URL
+            $nombre = $_GET['nombre'];
+            $apellidos = $_GET['apellidos'];
+            $avatar = $_GET['avatar'];
+        ?>
+        <h1>Otra Página</h1>
+        <p>¡Bienvenido, <?php echo $nombre . ' ' . $apellidos; ?>!</p>
+        <div>
+            <img src="<?php echo $avatar; ?>" alt="Avatar" style="float:left; margin-right: 10px;">
+            <p>Avatar seleccionado:</p>
+        </div>
+        <p>Diríjanse ahora con mi compañero.</p>
+    </div>
+</body>
+</html>
